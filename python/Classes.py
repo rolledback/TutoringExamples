@@ -1,6 +1,6 @@
 # Created 2/20/2015
 # Demonstrates classes in Python
-# Run with: Python 2.7
+# Run with: Python 2.7 or 3.4
 
 '''
 Classes are used to hold values associated with "objects". This type 

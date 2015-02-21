@@ -1,6 +1,6 @@
 # Created 2/20/2015
 # Demonstrates while loops in Python
-# Run with: Python 2.7
+# Run with: Python 2.7 or 3.4
 
 import random
 import time
