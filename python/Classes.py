@@ -46,6 +46,14 @@ class Bank(object):
     def modify_account(self, acc_num, new_value):
         self.accounts[acc_num - 1] = new_value
 
+    # There are also some special funtions class functions. They will almost always 
+    # start with __ (such as __init__) and are called implicitly when using 
+    # certain built in functions. In this example, we define __str__ which is 
+    # normally called when you use str() or on an instance of a class. This function 
+    # simply needs to return a string representation of the object.
+    def __str__(self):
+        return self.name
+
 def main():
     # using a constructor
     my_bank = Bank('Wells Fargo', 3)
@@ -58,5 +66,8 @@ def main():
     my_bank.print_accounts();
 
     print('\nAvg account value: ' + str(my_bank.avg_account_balance()) + '\n')
+
+    # __str__ example
+    print('Bank as a string: ' + str(my_bank))
 
 main()
