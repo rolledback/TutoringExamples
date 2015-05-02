@@ -1,3 +1,5 @@
+import java.util.Random;
+
 // Created 4/9/2015
 // Demonstrates DFS/Backtracing in Java
 // Run with Java 1.6+
@@ -10,16 +12,10 @@ public class DFS {
     static int[][] grid = new int[WIDTH][HEIGHT];
     public static void main(String[] args) {
         // setup initial grid, 1 indicates walkable
-        grid[0][1] = 1;
-        grid[0][2] = 1;
-        grid[1][0] = 1;
-        grid[2][0] = 1;
-        grid[1][1] = 1;
-        grid[0][3] = 1;
-        grid[1][4] = 1;
-        grid[1][2] = 1;
-
-        depthFirstSearch(0, 1);
+        int[] start = fillGrid();
+        System.out.println("Generated grid:");
+        printGrid();
+        depthFirstSearch(start[0], start[1]);
     }
 
     // perform DFS starting at location [r][c]
@@ -60,4 +56,24 @@ public class DFS {
 
         System.out.println();
     }
+
+    // fill grid with 0s and 1s randomly, returns coordinates of the first 1
+    public static int[] fillGrid() {
+        Random rand = new Random();
+        int first_row = -1;
+        int first_col = -1;
+        int value;
+        for(int i = 0; i < HEIGHT; i++) {
+            for(int j = 0; j < WIDTH; j++) {
+                value = rand.nextInt(2);
+                if(first_row == -1 && value == 1) {
+                    first_row = i;
+                    first_col = j;
+                }
+                grid[i][j] = value;
+            }
+        }
+        return new int[] {first_row, first_col};
+    }
+
 }
