@@ -1,0 +1,29 @@
+import random
+
+class Wheel(object):
+    # init a wheel, all wheels start at a random pressure between 0 and the maximum pressure
+    def __init__(self, maxPressure):
+
+    # returns the current pressure
+    def checkPressure(self):
+
+    # change the current pressure by p, but don't go below 0 or above the wheel's limit
+    def changePressure(self, p):
+
+class Vehicle(object):
+    # init a Vehicle with the given number of wheels
+    def __init__(self, maxWheelPressure):
+
+class Car(Vehicle):
+    # init a Car with the given number of wheels
+    def __init__(self, make, model, year, numWheels, maxWheelPressure):
+
+    # drives the car by simulating a loss in tire pressure, pressure lost = (distance / 1000) * (44 / 7)^2
+    def driveCar(self, distance):
+
+def main():
+    # make a 2014 Ford Focus, it has 4 wheels, each of which has a maximum pressure of 1500 PSI
+
+    # drive the car 5000 miles
+
+    # print out the pressure in each tire

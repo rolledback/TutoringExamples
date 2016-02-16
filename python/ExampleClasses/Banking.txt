@@ -1,0 +1,48 @@
+class Person(object):
+    # init a Person
+    def __init__(self, name = "John Doe", height = 6.0, age = 21):
+
+class Teller(Person):
+    # init a Teller
+    def __init__(self, name = "John Doe", height = 6.0, age = 21, empNum = 123456, yrsWorked = 1):
+
+    # string representation of a Teller, format as follows:
+    # "Name: John Doe, Emp Number: 123456, Years at bank: 1"
+    def __str__(self):
+
+class Bank(object):
+
+    # init a Bank, all accounts start with no money
+    def __init__(self, numAccounts, name = "People's Bank", location = "Austin TX", tellers = []):
+
+    # deposit the given amount of money into the specified account
+    # returns true if deposit was successful, false otherwise
+    def depositMoney(self, accountNumber, amount):
+
+    # returns total value of the bank
+    def getTotalAccounts(self):
+
+    # adds the given teller to the list of Tellers
+    def hireTeller(self, teller):
+
+    # returns whether or not a teller of the given name works at the bank
+    def tellerWorksHere(self, name):
+
+    # string representation of a Bank, format as follows:
+    # "People's Bank, Austin TX. Employees: 4, total value: $123456"
+    def __str__(self):
+
+def main():
+    # Make a Wells Fargo located in Austin TX with 10 accounts
+    
+    # Hire the following tellers at Wells Fargo:
+   
+    # Erica, 1.5m tall, 28 years old, employee number: 7864, worked at Wells Fargo for 3 years
+    # Jim, 1.8m tall, 32 years old, employee number: 2761, worked at Wells Fargo for 8 years
+    # Michael, 1.65m tall, 17 years old, employee number: 3354, worked at Wells Fargo for 1 year
+    
+    # Deposit $100 into 5 of the accounts chosen at random
+
+    # Print out the bank
+
+main()
